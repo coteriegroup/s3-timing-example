@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.9)
+project(timing_example C)
+set(CMAKE_C_STANDARD 11)
+set(SRC_DIR src)
+set(SRC_FILES ${SRC_DIR}/main.c)
+set(BUILD_DIR build)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -O0 -g")
+add_executable(timing ${SRC_FILES})
