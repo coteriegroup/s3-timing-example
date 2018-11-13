@@ -56,7 +56,7 @@ double measure(measure_type mt, int n, int count)
                 getrusage(RUSAGE_SELF, &end);
                 double begin_secs = begin.ru_utime.tv_sec + begin.ru_utime.tv_usec / 1000000.0;
                 double end_secs = end.ru_utime.tv_sec + end.ru_utime.tv_usec / 1000000.0;
-                time += (end_secs - begin_secs) / 1000.0;
+                time += (end_secs - begin_secs);
             }
             break;
 
@@ -70,7 +70,7 @@ double measure(measure_type mt, int n, int count)
                 clock_gettime(id, &end);
                 double end_secs = end.tv_sec + end.tv_nsec / 1000000000.0;
                 double begin_secs = begin.tv_sec + begin.tv_nsec / 1000000000.0;
-                time += (end_secs - begin_secs) / 1000.0;
+                time += (end_secs - begin_secs);
             }
             break;
 
